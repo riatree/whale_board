@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        html, body, ul, dl, ol, li, dt, dd,
+        h1, h2, h3, h4, h5, h6, p, a {
+            margin: 0; padding: 0;
+            list-style: none; text-decoration: none;
+            color: #333;
+        }
+
+        .screen-out {
+            display: none;
+            overflow: hidden;
+            z-index: -9999;
+        }
+
+        .header-container {
+            width: 100%;
+            padding: 20px 0;
+            background: rgba(10,10,10, 0.8);
+        }
+
+        .menubar-wrap {
+            width: 90%; margin: 0 auto;
+        }
+
+        .menubar-wrap .menubar-list {
+            overflow: hidden;
+        }
+
+        .menubar-list .menu {
+            float: left;
+            width: 100px;
+            padding: 5px;
+            text-align: center;
+            color: aliceblue;
+        }
+
+        .menu.whaleboard_logo {
+            margin-right: 5%;
+            vertical-align: middle;
+        }
+
+        .menu.whaleboard_login {
+            float: right;
+        }
+        .menu.whaleboard_login>a {
+            color: #adadad;
+            font-weight: bold;
+            transition: .8s;
+        }
+
+        .menu.whaleboard_login>a:hover {
+            color: #fff;
+        }
+
+        /* BOARD MAIN*/
+        .main-container .contents-container{
+            width: 100%;
+        }
+
+        .contents-container .contents-wrap {
+            width: 100%; height: 100%;
+            overflow: hidden;
+        }
+
+        .contents-wrap li {
+            float: left;
+        }
+
+        .side-wrap {
+            width: 10%; height: 500px;
+        }
+
+        .board-wrap {
+            width: 80%;
+        }
+
+        .board-wrap .explanation-wrap {
+            width: 100%; height: 100px;
+        }
+
+        .board-wrap .post-wrap {
+            width: 100%; height: 100%;
+        }
+
+        .post-wrap .write-box_btn{
+            width: 80%;
+            padding: 10px 0;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .write-box_btn>button {
+            padding: 10px 15px;
+            float: right;
+            border-radius: 5px;
+            border: none;
+            color: #fff;
+            background: rgba(10,10,10, 0.8);
+            cursor: pointer;
+        }
+
+        .post-wrap .post-list {
+            width: 80%;
+            height: 100%;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .post-list .post {
+            width: 100%;
+            padding: 15px 0;
+            margin: 5px auto;
+            border-bottom: 1.5px solid rgba(4,4,4,0.5);
+            transition: .5s;
+        }
+
+        .post .post-contents_list {
+            width: 100%; height: 100%;
+            overflow: hidden;
+        }
+
+        .post_contents.user-box {
+            width: 15%;
+            height: 123px;
+        }
+
+        .post_contents.user-box>p {
+            padding: 5px 10px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            word-wrap: break-word;
+        }
+
+        .post_contents.contents-box {
+            width: 85%;
+        }
+
+        .post_contents.contents-box>p {
+            padding: 5px 15px;
+        }
+
+        .post_title {
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        .post_content {
+            width: 100%; height: 80px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            word-wrap: break-word;
+
+        }
+    </style>
+</head>
+<body>
+<header class="header-container">
+    <h1 class="screen-out">고래보드</h1>
+    <div class="menubar-wrap">
+        <ul class="menubar-list">
+            <li class="menu whaleboard_logo"><a href="index.html"><img src="media/imgs/logo/WHALE%20BOARD.png"></a></li>
+            <li class="menu whaleboard_login"><a href="login.html">LOGIN</a></li>
+        </ul>
+    </div>
+</header>
+<main class="main-container">
+    <div class="contents-container">
+        <ul class="contents-wrap">
+            <li class="side-wrap empty"></li>
+            <li class="board-wrap">
+                <div class="explanation-wrap"></div>
+                <div class="post-wrap">
+                    <p class="write-box_btn">
+                        <button>글쓰기</button>
+                    </p>
+                    <ul class="post-list">
+                        <li class="post">
+                            <a href="#">
+                                <ul class="post-contents_list">
+                                    <li class="post_contents user-box">
+                                        <p class="post_username">username</p>
+                                        <p class="post_regdate">regdate</p>
+                                    </li>
+                                    <li class="post_contents contents-box">
+                                        <p class="post_title">title</p>
+                                        <p class="post_content">contents</p>
+                                    </li>
+                                    <li class="post_contents photo-box"></li>
+                                </ul>
+                            </a>
+                        </li> <!--//post-->
+
+                        <li class="post">
+                            <a href="#">
+                                <ul class="post-contents_list">
+                                    <li class="post_contents user-box">
+                                        <p class="post_username">username</p>
+                                        <p class="post_regdate">regdate</p>
+                                    </li>
+                                    <li class="post_contents contents-box">
+                                        <p class="post_title">title</p>
+                                        <p class="post_content">contents</p>
+                                    </li>
+                                    <li class="post_contents photo-box"></li>
+                                </ul>
+                            </a>
+                        </li> <!--//post-->
+
+                    </ul>
+                </div>
+            </li>
+            <li class="side-wrap"></li>
+        </ul>
+    </div>
+</main>
+<footer class="footer-container"></footer>
+</body>
+</html>
