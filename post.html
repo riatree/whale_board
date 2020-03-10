@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>게시글 제목&boxv;고래보드</title>
+    <link href="https://fonts.googleapis.com/css?family=Do+Hyeon&display=swap" rel="stylesheet">
+    <style>
+        html, body, ul, dl, ol, li, dt, dd,
+        h1, h2, h3, h4, h5, h6, p, a {
+            margin: 0; padding: 0;
+            list-style: none; text-decoration: none;
+            color: #333;
+        }
+
+        main, button {
+            font-family: 'Do Hyeon';
+        }
+
+        .screen-out {
+            display: none;
+            overflow: hidden;
+            z-index: -9999;
+        }
+
+        .header-container {
+            width: 100%;
+            padding: 20px 0;
+            background: rgba(10,10,10, 0.8);
+        }
+
+        .menubar-wrap {
+            width: 90%; margin: 0 auto;
+        }
+
+        .menubar-wrap .menubar-list {
+            overflow: hidden;
+        }
+
+        .menubar-list .menu {
+            float: left;
+            width: 100px;
+            padding: 5px;
+            text-align: center;
+            color: aliceblue;
+        }
+
+        .menu.whaleboard_logo {
+            margin-right: 5%;
+            vertical-align: middle;
+        }
+
+        .menu.whaleboard_login {
+            float: right;
+        }
+        .menu.whaleboard_login>a {
+            color: #adadad;
+            font-weight: bold;
+            transition: .8s;
+        }
+
+        .menu.whaleboard_login>a:hover {
+            color: #fff;
+        }
+
+        /*POST MAIN*/
+        .main-container {
+            width: 100%; height: 100%;
+        }
+
+        .post-container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .post-container .post-box, .comments-box {
+            width: 80%;
+            margin: 5px auto;
+        }
+
+        .post-box .title-box {
+            width: 100%;
+        }
+
+        .title-box .post_title {
+            padding: 10px 0;
+            font-weight: bold;
+            font-size: 1.3em;
+        }
+
+        .title-box .post_info {
+            padding-right: 10px;
+            font-size: .9em;
+            color: #adadad;
+        }
+
+        .contents-box {
+            padding: 20px 25px;
+            margin: 10px 0;
+        }
+
+        .post-container .comments-box {
+            padding: 0;
+        }
+
+        .comments-box .comment-input {
+            width: 75%; height: 30px;
+            margin: 0 1%;
+            padding: 15px 1%;
+            resize: none;
+            font-size: 1.1em;
+            vertical-align: top;
+        }
+        .comments-box .comment-input_btn {
+            width: 60px;
+            padding: 20px 0;
+        }
+
+
+        /*comment*/
+
+        .comment {
+            width: 80%; height: 80px;
+            padding: 0 1%;
+            margin: 10px 1%;
+            position: relative;
+        }
+
+        .comment .comment_data {
+            overflow: hidden;
+            height: 100%;
+        }
+
+        .comment .comment_data>dd{
+            float: left;
+            height: 100%;
+        }
+
+        .comment_data .comment_writer {
+            width: 15%;
+            margin-right: 10px;
+        }
+
+        .comment_writer>div {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            word-wrap: break-word;
+        }
+
+        .comment_data .comment_content {
+            width: 75%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            word-wrap: break-word;
+            word-break: break-all;
+            white-space: pre-line;
+
+        }
+
+        .comment_data .comment_btn_box {
+            position: absolute;
+            top: 50px; right: 0;
+        }
+    </style>
+</head>
+<body>
+<header class="header-container">
+    <h1 class="screen-out">고래보드</h1>
+    <div class="menubar-wrap">
+        <ul class="menubar-list">
+            <li class="menu whaleboard_logo"><a href="index.html"><img src="media/imgs/logo/WHALE%20BOARD.png"/></a></li>
+            <li class="menu whaleboard_login"><a href="login.html">LOGIN</a></li>
+        </ul>
+    </div>
+</header>
+
+<main class="main-container">
+    <h2 class="screen-out"> OOO님의 게시글</h2>
+    <div class="post-container">
+        <div class="post-box">
+            <div class="title-box">
+                <h3 class="post_title">POST TITLE</h3>
+                <span class="post_info">작성자</span>
+                <span class="post_info">게시일자</span>
+            </div>
+            <div class="contents-box">
+                <div class="post_contents">content</div>
+            </div>
+        </div>
+        <div class="comments-box">
+            <p>Comments</p>
+
+            <div class="comment-input-box">
+                <textarea class="comment-input" placeholder="댓글을 입력해주세요."></textarea><!--
+                --><button class="comment-input_btn">버튼</button>
+            </div>
+
+            <div class="comment-list-box">
+                <ul class="comment-list">
+                    <li class="comment">
+                        <h5 class="screen-out"> OOO 님의 댓글 </h5>
+                        <dl class="comment_data">
+                            <dt class="screen-out">유저상자</dt>
+                            <dd class="comment_writer">
+                                <div>Uername</div>
+                                <div>Regdate</div>
+                            </dd>
+                            <dt class="screen-out">댓글상자</dt>
+                            <dd class="comment_content">content content content content content content content content</dd>
+                            <dt class="screen-out">버튼 상자</dt>
+                            <dd class="comment_btn_box">
+                                <button>수정</button>
+                                <button>삭제</button>
+                            </dd>
+                        </dl>
+                    </li>
+
+                    <li class="comment">
+                        <h5 class="screen-out"> OOO 님의 댓글 </h5>
+                        <dl class="comment_data">
+                            <dt class="screen-out">유저상자</dt>
+                            <dd class="comment_writer">
+                                <div>Uername</div>
+                                <div>Regdate</div>
+                            </dd>
+                            <dt class="screen-out">댓글상자</dt>
+                            <dd class="comment_content">content content content content content content content content</dd>
+                            <dt class="screen-out">버튼 상자</dt>
+                            <dd class="comment_btn_box">
+                                <button>수정</button>
+                                <button>삭제</button>
+                            </dd>
+                        </dl>
+                    </li>
+
+                    <li class="comment">
+                        <h5 class="screen-out"> OOO 님의 댓글 </h5>
+                        <dl class="comment_data">
+                            <dt class="screen-out">유저상자</dt>
+                            <dd class="comment_writer">
+                                <div>Uername</div>
+                                <div>Regdate</div>
+                            </dd>
+                            <dt class="screen-out">댓글상자</dt>
+                            <dd class="comment_content">content content content content content content content content</dd>
+                            <dt class="screen-out">버튼 상자</dt>
+                            <dd class="comment_btn_box">
+                                <button>수정</button>
+                                <button>삭제</button>
+                            </dd>
+                        </dl>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</main>
+</body>
+</html>

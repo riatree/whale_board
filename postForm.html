@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>글쓰기&boxv;고래보드</title>
+    <link href="https://fonts.googleapis.com/css?family=Do+Hyeon&display=swap" rel="stylesheet">
+    <style>
+        html, body, ul, dl, ol, li, dt, dd,
+        h1, h2, h3, h4, h5, h6, p, a {
+            margin: 0; padding: 0;
+            list-style: none; text-decoration: none;
+            color: #333;
+        }
+
+        main {
+            font-family: 'Do Hyeon';
+        }
+        .screen-out {
+            display: none;
+            overflow: hidden;
+            z-index: -9999;
+        }
+
+        .header-container {
+            width: 100%;
+            padding: 20px 0;
+            background: rgba(10,10,10, 0.8);
+        }
+
+        .menubar-wrap {
+            width: 90%; margin: 0 auto;
+        }
+
+        .menubar-wrap .menubar-list {
+            overflow: hidden;
+        }
+
+        .menubar-list .menu {
+            float: left;
+            width: 100px;
+            padding: 5px;
+            text-align: center;
+            color: aliceblue;
+        }
+
+        .menu.whaleboard_logo {
+            margin-right: 5%;
+            vertical-align: middle;
+        }
+
+        .menu.whaleboard_login {
+            float: right;
+        }
+        .menu.whaleboard_login>a {
+            color: #adadad;
+            font-weight: bold;
+            transition: .8s;
+        }
+
+        .menu.whaleboard_login>a:hover {
+            color: #fff;
+        }
+
+
+        /*POST WRITE*/
+        .main-container {
+            width: 100%; height: 100%;
+        }
+
+        .write-container {
+            width: 80%; height: 100%;
+            margin: 0 auto;
+        }
+
+        .write-container .editor-box {
+            padding: 0 15px;
+        }
+
+        .write-container .write-btn{
+            width: 80%;
+            padding: 0 15px;
+        }
+    </style>
+</head>
+<body>
+<header class="header-container">
+    <h1 class="screen-out">고래보드</h1>
+    <div class="menubar-wrap">
+        <ul class="menubar-list">
+            <li class="menu whaleboard_logo"><a href="index.html"><img src="media/imgs/logo/WHALE%20BOARD.png"></a></li>
+            <li class="menu whaleboard_login"><a href="login.html">LOGIN</a></li>
+        </ul>
+    </div>
+</header>
+
+<main class="main-container">
+    <div class="write-container">
+        <div class="editor-box">
+            <div>툴바</div>
+            <div>asdasdasd</div>
+        </div>
+        <div class="write-btn">
+            <button>취소</button>
+            <button>등록</button>
+        </div>
+    </div>
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>
